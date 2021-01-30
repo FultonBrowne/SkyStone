@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.framework;
 
 import com.qualcomm.robotcore.hardware.*;
+import com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cRangeSensor;
 
 /**
  * Base framework for movement
@@ -215,4 +216,41 @@ public class Move {
        while(!sensor.isPressed()){}
        motor.setPower(0.0);
     }
+   public void spiner(DcMotor motor0, ModernRoboticsI2cRangeSensor range0){
+      while (range0.rawUltrasonic() < 40){
+         motor0.setPower(1.0);
+      }
+      if(range0.rawUltrasonic() < 40){
+         spiner(motor0, range0);
+      }
+
+   }
+   public void threeTouchSensor(TouchSensor sen1, TouchSensor sen2, TouchSensor sen3, TouchSensor sen4, DcMotor motor0){
+      //if(sen1){
+      //   motor0.setPower(1.0);
+      //}
+      //if(sen3 || sen4) {
+      // Grab roller is off
+      // If grab roller is off, check distance sensor 1
+      //}
+      // move this
+/**
+      If distance sensor 1 is greater than 12”, check distance sensor 2
+      If distance sensor 2 is greater than 12”, move arm to up position.
+      If touch sensor 2 is pushed, arm hold position for 3 seconds
+         Reverse intake grab motors to expel the disk
+         Arm returns to down position
+      When touch sensor 1 is pushed
+         Roller arm Motor holds position
+      If Color Sensor sees orange
+            Turn on shooter motors
+   **/
+
+
+   }
+   
+   public void fire(){}
+
+   
+
 }

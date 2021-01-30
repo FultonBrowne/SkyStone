@@ -10,7 +10,7 @@ class AutoRed : OpMode() {
    var motor1:DcMotor? = null 
    var motor2:DcMotor? = null 
    var motor3:DcMotor? = null 
-   var autotools:AutoFramework? = null // c people will get this ( ͡~ ͜ʖ ͡°)
+   var autotools:AutoFramework? = null // c people will get this
    override fun init(){
         motor0 = hardwareMap.dcMotor["motor0"]
         motor1 = hardwareMap.dcMotor["motor1"]

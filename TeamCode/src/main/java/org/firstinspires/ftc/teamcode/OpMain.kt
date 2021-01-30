@@ -23,6 +23,13 @@ class OpMain : OpMode() {
    }
 
    override fun loop(){
+		/* get a bool of yellow true or false */
+		val isYellow = true //TODO make a function
+		if (isYellow){
+		//Turn on firing motors
+		}else{
+			//Run loader
+		}
       if(gamepad1.left_stick_y > 0.1 || gamepad1.left_stick_y < -0.1){
          move.forward(
             motor0, 

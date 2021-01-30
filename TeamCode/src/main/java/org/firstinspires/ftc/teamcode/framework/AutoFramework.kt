@@ -66,7 +66,7 @@ class AutoFramework(
    }
 
    fun initMove(){
-      //TODO
+      //TODO get everthing
    }
 
    fun spinDropSpin(){
@@ -76,5 +76,9 @@ class AutoFramework(
    fun drop(){
 
    }
+
+
+   
+
 
 }
