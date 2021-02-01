@@ -38,7 +38,16 @@ class OpMain : OpMode() {
    }
 
    fun isYellow():Boolean{
-      
+      var toReturn = false;
+        telemetry.addData(Integer.toString(color0!!.argb()), "all");
+       telemetry.addData(Integer.toString(color0!!.red()), "red");
+        telemetry.addData(Integer.toString(color0!!.green()), "green");
+       telemetry.addData(Integer.toString(color0!!.blue()), "blue");
+        telemetry.addData(Integer.toString(color0!!.alpha()), "alpha");
+        if (color0!!.alpha() < 30) toReturn = true;
+        color0!!.enableLed(true);
+       // if (colorSensor)
+        return toReturn;
    }
 
    override fun loop(){
